@@ -4,8 +4,16 @@ interface RepositoriesState {
   data: string[];
 }
 
+interface Action {
+  type: string;
+  payload?: any;
+}
+
 // TODO:
-const reducer = (state: RepositoriesState, action: any): RepositoriesState => {
+const reducer = (
+  state: RepositoriesState,
+  action: Action
+): RepositoriesState => {
   switch (action.type) {
     // action that we will see as soon as user clicks on the search button
     case 'search_repositories':
